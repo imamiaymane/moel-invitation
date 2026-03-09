@@ -10,9 +10,9 @@ export default async function handler(req, res) {
 
   try {
 
-    const { name, email } = req.body;
+    const { name, email } = req.body || {};
 
-    await resend.emails.send({
+    const data = await resend.emails.send({
       from: "MOEL <info@moel.de>",
       to: email,
       subject: "Ihre Einladung zur MOEL Eröffnung",
@@ -27,9 +27,11 @@ export default async function handler(req, res) {
       `
     });
 
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: true, data });
 
   } catch (error) {
+
+    console.error("Email error:", error);
 
     res.status(500).json({ error: error.message });
 
