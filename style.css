@@ -5,9 +5,9 @@ color:white;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+min-height:100vh;
 margin:0;
-overflow:hidden;
+padding:20px;
 }
 
 /* animated background */
@@ -30,10 +30,19 @@ animation:backgroundMove 12s linear infinite;
 /* container */
 
 .container{
-width:380px;
+width:100%;
+max-width:380px;
+padding:25px;
+box-sizing:border-box;
 text-align:center;
 position:relative;
 z-index:1;
+
+background:rgba(20,20,20,0.6);
+backdrop-filter:blur(12px);
+
+border-radius:12px;
+
 animation:fadeUp 1s ease;
 }
 
@@ -45,8 +54,8 @@ animation:fadeUp 1s ease;
 /* logo */
 
 .logo{
-width:120px;
-margin-bottom:30px;
+width:110px;
+margin-bottom:25px;
 animation:logoFade 1.5s ease;
 }
 
@@ -56,7 +65,7 @@ animation:logoFade 1.5s ease;
 }
 
 h1{
-font-size:28px;
+font-size:26px;
 margin-bottom:10px;
 letter-spacing:1px;
 }
@@ -64,6 +73,7 @@ letter-spacing:1px;
 .subtitle{
 color:#aaa;
 margin-bottom:30px;
+font-size:15px;
 }
 
 /* inputs */
@@ -75,8 +85,8 @@ margin-bottom:15px;
 border:none;
 background:#1a1a1a;
 color:white;
-border-radius:6px;
-font-size:14px;
+border-radius:8px;
+font-size:16px;
 transition:all 0.3s ease;
 }
 
@@ -95,9 +105,9 @@ background:white;
 color:black;
 font-weight:bold;
 border:none;
-border-radius:6px;
+border-radius:8px;
 cursor:pointer;
-font-size:15px;
+font-size:16px;
 transition:all 0.3s ease;
 }
 
@@ -142,7 +152,7 @@ transform:translateY(0);
 
 .success-card h2{
 margin-bottom:15px;
-font-size:26px;
+font-size:24px;
 }
 
 .success-card p{
@@ -155,4 +165,34 @@ font-size:15px;
 margin-top:15px;
 color:#fff;
 font-weight:bold;
+}
+
+/* MOBILE OPTIMIZATION */
+
+@media (max-width:480px){
+
+.container{
+padding:20px;
+}
+
+.logo{
+width:90px;
+}
+
+h1{
+font-size:22px;
+}
+
+.subtitle{
+font-size:14px;
+}
+
+input{
+padding:13px;
+}
+
+button{
+padding:14px;
+}
+
 }
