@@ -1,0 +1,158 @@
+body{
+background:#0b0b0b;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+overflow:hidden;
+}
+
+/* animated background */
+
+body::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background:radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 60%);
+animation:backgroundMove 12s linear infinite;
+}
+
+@keyframes backgroundMove{
+0%{transform:translate(0,0);}
+50%{transform:translate(-3%,-3%);}
+100%{transform:translate(0,0);}
+}
+
+/* container */
+
+.container{
+width:380px;
+text-align:center;
+position:relative;
+z-index:1;
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+0%{opacity:0; transform:translateY(30px);}
+100%{opacity:1; transform:translateY(0);}
+}
+
+/* logo */
+
+.logo{
+width:120px;
+margin-bottom:30px;
+animation:logoFade 1.5s ease;
+}
+
+@keyframes logoFade{
+0%{opacity:0; transform:scale(0.9);}
+100%{opacity:1; transform:scale(1);}
+}
+
+h1{
+font-size:28px;
+margin-bottom:10px;
+letter-spacing:1px;
+}
+
+.subtitle{
+color:#aaa;
+margin-bottom:30px;
+}
+
+/* inputs */
+
+input{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:none;
+background:#1a1a1a;
+color:white;
+border-radius:6px;
+font-size:14px;
+transition:all 0.3s ease;
+}
+
+input:focus{
+outline:none;
+background:#222;
+box-shadow:0 0 0 2px rgba(255,255,255,0.15);
+}
+
+/* button */
+
+button{
+width:100%;
+padding:16px;
+background:white;
+color:black;
+font-weight:bold;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:15px;
+transition:all 0.3s ease;
+}
+
+button:hover{
+background:#f2f2f2;
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(255,255,255,0.15);
+}
+
+button:active{
+transform:translateY(0);
+box-shadow:none;
+}
+
+/* smooth fade out */
+
+.fade-out{
+opacity:0;
+transform:translateY(10px);
+transition:all 0.6s ease;
+}
+
+/* success card */
+
+.success-card{
+display:none;
+margin-top:30px;
+padding:25px;
+background:#111;
+border-radius:10px;
+border:1px solid rgba(255,255,255,0.1);
+opacity:0;
+transform:translateY(20px);
+transition:all 0.8s ease;
+}
+
+.success-card.show{
+display:block;
+opacity:1;
+transform:translateY(0);
+}
+
+.success-card h2{
+margin-bottom:15px;
+font-size:26px;
+}
+
+.success-card p{
+color:#bbb;
+line-height:1.6;
+font-size:15px;
+}
+
+.address{
+margin-top:15px;
+color:#fff;
+font-weight:bold;
+}
