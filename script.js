@@ -1,7 +1,7 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
 const supabaseUrl = "https://rdnauhyhjiefgitgddoa.supabase.co"
-const supabaseKey = "sb_publishable_v6kaA7-t_iwAE72sIO8QWw_SLmfdCYR"
+const supabaseKey = "YOUR_SUPABASE_PUBLIC_KEY"
 
 const supabase = createClient(supabaseUrl, supabaseKey)
 
@@ -39,7 +39,7 @@ return
 
 try{
 
-const response = await fetch("http://localhost:3000/send-email",{
+const response = await fetch("/api/send-email",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
@@ -61,6 +61,7 @@ console.log("Email error:", err)
 }
 
 /* Show success message */
+
 document.getElementById("inviteForm").style.display="none"
 document.getElementById("title").style.display="none"
 document.getElementById("subtitle").style.display="none"
