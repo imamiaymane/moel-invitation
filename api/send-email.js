@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         <p><b>21. März 2026</b></p>
         <p>Eckenheimer Landstraße 48<br>60318 Frankfurt</p>
 
-        <img src="https://rdnauhyhjiefgitgddoa.supabase.co/storage/v1/object/public/invitations/invitation.png" width="400"/>
+        <img src="https://rdnauhyhjiefgitgddoa.supabase.co/storage/v1/object/public/invitations/invitations.png" width="400"/>
       `
     });
 
