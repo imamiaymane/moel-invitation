@@ -35,7 +35,7 @@ html:`
 
 <p>Ihre Teilnahme zur Eröffnung von <b>MOEL</b> wurde bestätigt.</p>
 
-<p>Wir freuen uns, Sie am <b>20. März 2026</b> begrüßen zu dürfen.</p>
+<p>Wir freuen uns, Sie am <b>21. März 2026</b> begrüßen zu dürfen.</p>
 
 <img src="https://rdnauhyhjiefgitgddoa.supabase.co/storage/v1/object/public/invitations/invitation.png" width="400"/>
 
