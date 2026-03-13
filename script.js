@@ -78,11 +78,11 @@ function sanitizeValue(value) {
 
 function validateForm({ name, email }) {
   if (!name || name.length < 2) {
-    return "Bitte geben Sie Ihren vollstandigen Namen ein.";
+    return "Bitte geben Sie Ihren vollständigen Namen ein.";
   }
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return "Bitte geben Sie eine gultige E-Mail-Adresse ein.";
+    return "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
   }
 
   return "";
@@ -165,7 +165,7 @@ form.addEventListener("submit", async (event) => {
       email: payload.email
     });
 
-    setStatus("Ihre Bestatigung war erfolgreich.", "success");
+    setStatus("Ihre Bestätigung war erfolgreich.", "success");
     showSuccess(payload);
   } catch (error) {
     console.error(error);
