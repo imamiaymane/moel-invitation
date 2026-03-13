@@ -1,69 +1,119 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>MOEL Einladung bestätigen</title>
-
+<meta
+  name="description"
+  content="Bestätigen Sie Ihre Teilnahme zur Eröffnung von MOEL am 21. März 2026 in Frankfurt am Main."
+>
 <link rel="icon" type="image/png" href="logo.png">
-
+<link rel="preload" as="image" href="invitations.png">
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-
-<div class="container">
-
-<img src="logo.png" class="logo">
-
-<h1 id="title">Teilnahme bestätigen</h1>
-
-<p id="subtitle" class="subtitle">
-Bitte bestätigen Sie Ihre Teilnahme zur Eröffnung von MOEL.
-</p>
-
-<form id="inviteForm">
-
-<input id="name" type="text" placeholder="Name" required>
-
-<input id="email" type="email" placeholder="E-Mail-Adresse" required>
-
-<input id="phone" type="tel" placeholder="Telefonnummer (optional)">
-
-<button type="submit">
-Ich bestätige meine Teilnahme
-</button>
-
-</form>
-
-<div id="successMessage" class="success-card">
-
-<h2>Vielen Dank.</h2>
-
-<p>
-Ihre Teilnahme zur Eröffnung von <b>MOEL</b> wurde bestätigt.
-</p>
-
-<p>
-Bitte prüfen Sie Ihre E-Mail.<br>
-Dort finden Sie Ihre persönliche Einladung.
-</p>
-
-<p class="address">
-21. März 2026<br>
-Eckenheimer Landstraße 48<br>
-60318 Frankfurt am Main
-</p>
-
+<div class="page-shell" aria-hidden="true">
+  <div class="glow glow-left"></div>
+  <div class="glow glow-right"></div>
+  <div class="mesh"></div>
 </div>
 
-</div>
+<main class="layout">
+  <section class="hero-panel" id="heroPanel">
+    <div class="eyebrow">MOEL Opening</div>
+    <img src="logo.png" class="logo" alt="MOEL Logo">
+    <h1 id="title">Ein Abend, der nach Ankunft aussieht.</h1>
+    <p id="subtitle" class="subtitle">
+      Bestatigen Sie Ihre Teilnahme zur Eroffnung von MOEL und erhalten Sie Ihre
+      personliche Einladung in einem Moment, der sich so bewusst anfuhlt wie die Marke selbst.
+    </p>
+
+    <div class="details-card">
+      <div class="detail">
+        <span class="detail-label">Datum</span>
+        <strong>21. Marz 2026</strong>
+      </div>
+      <div class="detail">
+        <span class="detail-label">Ort</span>
+        <strong>Eckenheimer Landstrasse 48, 60318 Frankfurt am Main</strong>
+      </div>
+      <div class="detail">
+        <span class="detail-label">Atmosphare</span>
+        <strong>Kuratiert, reduziert, personlich</strong>
+      </div>
+    </div>
+
+    <figure class="invitation-preview" id="invitationPreview">
+      <img src="invitations.png" alt="Vorschau der MOEL Einladung">
+      <figcaption>Ihre digitale Einladung nach der Bestatigung</figcaption>
+    </figure>
+  </section>
+
+  <section class="form-panel" id="formPanel">
+    <div class="form-card" id="formCard">
+      <p class="form-kicker">RSVP</p>
+      <h2>Teilnahme bestatigen</h2>
+      <p class="form-copy">
+        Wenige Angaben genugen. Danach erhalten Sie Ihre Einladung direkt per E-Mail.
+      </p>
+
+      <form id="inviteForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">E-Mail-Adresse</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Telefonnummer <span>(optional)</span></label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            inputmode="tel"
+          >
+        </div>
+
+        <div class="hp-field" aria-hidden="true">
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button id="submitButton" type="submit">
+          <span class="button-label">Ich bestatige meine Teilnahme</span>
+          <span class="button-loader" aria-hidden="true"></span>
+        </button>
+
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div id="successMessage" class="success-card" aria-live="polite">
+      <p class="form-kicker">Bestatigt</p>
+      <h2>Vielen Dank fur Ihre Zusage.</h2>
+      <p>
+        Ihre Teilnahme zur Eroffnung von <strong>MOEL</strong> wurde erfolgreich
+        registriert.
+      </p>
+      <p id="successMeta" class="success-meta"></p>
+      <div class="success-details">
+        <p><strong>Datum:</strong> 21. Marz 2026</p>
+        <p><strong>Ort:</strong> Eckenheimer Landstrasse 48, 60318 Frankfurt am Main</p>
+      </div>
+      <p>
+        Bitte prufen Sie nun Ihr E-Mail-Postfach. Dort finden Sie Ihre personliche
+        Einladung fur den Abend.
+      </p>
+    </div>
+  </section>
+</main>
 
 <script type="module" src="script.js"></script>
-
 </body>
 </html>
