@@ -54,8 +54,8 @@ export default async function handler(req, res) {
               Vielen Dank, ${safeName}
             </h1>
             <p style="margin:0 0 16px;color:#d1c0b1;font-size:16px;line-height:1.7;">
-              Ihre Teilnahme wurde erfolgreich bestätigt. Wir freuen uns darauf, Sie zur
-              Eröffnung von MOEL willkommen zu heißen.
+              Ihre Teilnahme wurde erfolgreich bestätigt.<br>
+              Wir freuen uns, Sie zur Eröffnung von MOEL begrüßen zu dürfen.
             </p>
             <p style="margin:0 0 4px;color:#f5ebdf;font-size:16px;"><strong>21. März 2026</strong></p>
             <p style="margin:0 0 4px;color:#f5ebdf;font-size:16px;"><strong>15:00 Uhr</strong></p>
