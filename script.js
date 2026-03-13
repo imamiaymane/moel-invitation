@@ -14,7 +14,6 @@ const successMeta = document.getElementById("successMeta");
 const revealNodes = document.querySelectorAll(".hero-panel, .form-panel");
 const heroPanel = document.getElementById("heroPanel");
 const formPanel = document.getElementById("formPanel");
-const invitationPreview = document.getElementById("invitationPreview");
 
 const fields = {
   name: document.getElementById("name"),
@@ -57,7 +56,6 @@ function attachParallax(node, intensityX = 10, intensityY = 10) {
 
 attachParallax(heroPanel, 4, 4);
 attachParallax(formPanel, 3, 3);
-attachParallax(invitationPreview, 9, 9);
 
 function setStatus(message, type = "") {
   formStatus.textContent = message;

@@ -58,6 +58,7 @@ export default async function handler(req, res) {
               Eroffnung von MOEL willkommen zu heissen.
             </p>
             <p style="margin:0 0 4px;color:#f5ebdf;font-size:16px;"><strong>21. Marz 2026</strong></p>
+            <p style="margin:0 0 4px;color:#f5ebdf;font-size:16px;"><strong>15:00 Uhr</strong></p>
             <p style="margin:0 0 26px;color:#d1c0b1;font-size:16px;line-height:1.6;">
               Eckenheimer Landstrasse 48<br>60318 Frankfurt am Main
             </p>
